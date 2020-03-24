@@ -1,0 +1,15 @@
+server:
+  port: 7100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:4399/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: TECHNIQUES_DOCUMENT
+
+logback:
+  path: D:/cqlyy/project/cq/cq_practice_techniques_parent/cq_techniques_document/target/
