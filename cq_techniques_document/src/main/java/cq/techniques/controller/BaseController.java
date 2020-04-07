@@ -1,13 +1,18 @@
 package cq.techniques.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import cq.techniques.service.FreeMarkerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BaseController {
+    @Autowired
+    private FreeMarkerService freeMarkerService;
 
-    @PostMapping("/test")
+    @GetMapping("/test")
     public Object test(){
-        return "yyy";
+        freeMarkerService.createHtmlByFreeMarker();
+        return "ok";
     }
 }
