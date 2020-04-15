@@ -1,5 +1,5 @@
 server:
-  port: 7100
+  port: 6100
 eureka:
   client:
     serviceUrl:
@@ -9,11 +9,11 @@ eureka:
 
 spring:
   application:
-    name: TECHNIQUES_DOCUMENT
+    name: TECHNIQUES_COMMON
   freemarker:
     cache: false #关闭模板缓存
     settings:
       template_update_delay: 0 #检查模板更新延迟时间
 
 logback:
-  path: D:/cqlyy/project/cq/cq_practice_techniques_parent/cq_techniques_document/target/
+  path: D:/cqlyy/project/cq/cq_practice_techniques_parent/cq_techniques_common/target/

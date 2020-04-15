@@ -1,0 +1,33 @@
+server:
+  port: 7500
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7085/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: TECHNIQUES_PROVIDER
+  freemarker:
+    cache: false #关闭模板缓存
+    settings:
+      template_update_delay: 0 #检查模板更新延迟时间
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    consumer:
+      group-id: pay
+      auto-offset-reset: latest
+      # 自动提交 offset
+      enable-auto-commit: true
+      #      auto-commit-interval: 10
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+logback:
+  path: D:/cqlyy/project/cq/cq_practice_techniques_parent/cq_techniques_provider/target/
